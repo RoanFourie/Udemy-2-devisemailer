@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :articles
+  resources :contacts
   root to: 'pages#index'
 
   # If you want a localhost:3000/hello to route to the contacts page then:
