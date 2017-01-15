@@ -1,4 +1,5 @@
 class CommentsController < ApplicationCOntroller
+  before_action :authenticate_user!
 
   def create
     @article = Article.find(params[:article_id])
@@ -14,14 +15,25 @@ class CommentsController < ApplicationCOntroller
 
   def update
     @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+
+    if @comment.update(params[:comment].permit(:body))
+      redirect_to article_path(@article), notice: "Your comment has been updated."
+    else
+      render 'edit'
+    end
   end
 
   def edit
     @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
   end
 
   def destroy
     @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+    @comment.destroy
+    redirect_to article_path(@article), notice: "Your comment has been deleted."
   end
 
 end
