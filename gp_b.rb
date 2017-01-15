@@ -1,6 +1,6 @@
 
-branch = "lab17"
-comments = "Completed up to (078) Lab 17 - Comments"
+branch = "lab18"
+comments = "Completed up to (081) Lab 18 - Updating Views"
 
 system("git add -A")
 system("git commit -m \"#{comments}\"")
