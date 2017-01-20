@@ -18,3 +18,8 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
  @import "yeti";
+
+
+body {
+  padding-bottom: 125px; /* to fixe the footer that covers up the page contents at the bottom */
+}

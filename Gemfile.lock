@@ -170,6 +170,9 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    will_paginate (3.1.5)
+    will_paginate-bootstrap (1.0.1)
+      will_paginate (>= 3.0.3)
 
 PLATFORMS
   x86-mingw32
@@ -188,13 +191,15 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails_12factor
   sass-rails (~> 5.0)
-  simple_form (~> 3.3, >= 3.3.1)
+  simple_form
   spring
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  will_paginate
+  will_paginate-bootstrap
 
 BUNDLED WITH
    1.13.6
